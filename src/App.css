@@ -1,22 +1,121 @@
-.App {
-  text-align: center;
+html,
+body {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
+a {
+    text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Welcome {
+    opacity: 0;
+    transform: translate(100px);
+    animation: animeIn 2000ms ease forwards;
 }
 
-.App-link {
-  color: #09d3ac;
+.Logo {
+    opacity: 0;
+    animation: animeLogo 1500ms ease forwards;
+}
+
+@keyframes animeLogo {
+    20% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    100% {
+        opacity: 0.78;
+        transform: translate(0px) scale(1.12);
+    }
+}
+
+.LoginLogo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0px;
+    opacity: 0;
+    animation: animeLogin 2000ms ease forwards;
+}
+
+.LoginText {
+
+    animation: animeLoginText 3000ms ease forwards;
+}
+
+@keyframes animeLoginText {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px) scale(1);
+
+    }
+}
+
+
+@keyframes animeLogin {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px) scale(1);
+
+    }
+}
+
+@keyframes animeIn {
+    40% {
+        opacity: 0;
+        transform: translateY(40px) scale(2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px) scale(1);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.paperAnimte {
+    animation: fade-in 0.5s;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+
+    }
 }
